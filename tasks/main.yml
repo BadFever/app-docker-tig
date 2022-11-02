@@ -1,0 +1,29 @@
+- name: Create application directory.
+  ansible.builtin.file:
+    path: "{{ application_path }}"
+    state: directory
+
+- name: Copy Dockerfiles.
+  ansible.builtin.copy:
+    src: "{{ item }}/"
+    dest: "{{ application_path }}/{{ item }}/"
+  loop:
+    - grafana
+    - influxdb
+    - nginx
+    - telegraf
+  
+- name: Prepare influxdb configuration.
+  ansible.builtin.template:
+    src: "env.influxdb.j2"
+    dest: "{{ application_path }}/env.influxdb"
+
+- name: Prepare telegraf configuration.
+  ansible.builtin.template:
+    src: "app_docker_tig_telegraf.conf.j2"
+    dest: "{{ application_path }}/telegraf/telegraf.conf"
+
+- name: Prepare docker-compose.
+  ansible.builtin.template:
+    src: "app_docker_tig_docker-compose.yml.j2"
+    dest: "{{ application_path }}/docker-compose.yml"

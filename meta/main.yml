@@ -1,0 +1,13 @@
+---
+dependencies:
+  - role: ansible-role-docker
+
+galaxy_info:
+  author: badfever
+  description: "Deploy TIG stack in docker"
+  license: "license (BSD, MIT)"
+  min_ansible_version: "1.8"
+  platforms:
+    - name: Ubuntu
+      versions:
+        - focal

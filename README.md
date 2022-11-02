@@ -1,4 +1,4 @@
-# docker-tig
+# docker-app-tig
 
 ## Usage
 

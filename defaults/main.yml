@@ -1,0 +1,47 @@
+---
+# General app configurations.
+
+application_path: "/srv/app-docker-tig"
+
+# InfluxDB configurations.
+
+influxdb_init_mode: "setup"
+influxdb_init_username: "db"
+influxdb_init_password: "VMware1!"
+influxdb_init_org: "badfever.de"
+influxdb_init_bucket: "bucket01"
+influxdb_init_admin_token: "t5fxAMdlPCqX12yj3IGzxZILEANONQPQkvhTI-NqaFp0sO9dxFX2kcqQ-XJsOEFdBpGRmncYr2HKd6bB0Un-oQ=="
+
+# Telegraf configurations.
+
+telegraf_global_tags: []
+telegraf_agent_interval: 10
+telegraf_agent_round_interval: true
+telegraf_agent_metric_buffer_limit: 10000
+telegraf_agent_flush_buffer_when_full: true
+telegraf_agent_collection_jitter: 0
+telegraf_agent_flush_interval: 1
+telegraf_agent_flush_jitter: 0
+telegraf_agent_metric_batch_size: 1000
+telegraf_agent_debug: false
+telegraf_agent_quiet: false
+telegraf_agent_hostname: "{{ ansible_fqdn }}"
+telegraf_agent_omit_hostname: false
+telegraf_agent_output:
+  - type: influxdb_v2
+    config:
+      - urls = ["http://influxdb:8086"]
+      - token = "{{ influxdb_init_admin_token }}"
+      - organization = "{{ influxdb_init_org }}"
+      - bucket = "{{ influxdb_init_bucket }}"
+telegraf_plugins_extra:
+  - type: vsphere
+    config:
+      - vcenters = ["https://172.168.0.20/sdk"]
+      - username = "administrator@vsphere.local"
+      - password = "fever.123WL"
+      - vm_metric_include = []
+      - vm_instances = true
+      - host_metric_include = []
+      - insecure_skip_verify = true
+      - historical_interval = "5m"
