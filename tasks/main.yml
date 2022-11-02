@@ -21,7 +21,7 @@
 - name: Prepare telegraf configuration.
   ansible.builtin.template:
     src: "telegraf.conf.j2"
-    dest: "{{ application_path }}/telegraf/telegraf.conf"
+    dest: "{{ application_path }}/telegraf/config/telegraf.conf"
 
 - name: Prepare docker-compose.
   ansible.builtin.template:
