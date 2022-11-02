@@ -8,9 +8,9 @@ application_path: "/srv/app-docker-tig"
 influxdb_init_mode: "setup"
 influxdb_init_username: "db"
 influxdb_init_password: "VMware1!"
-influxdb_init_org: "badfever.de"
+influxdb_init_org: "organization"
 influxdb_init_bucket: "bucket01"
-influxdb_init_admin_token: "t5fxAMdlPCqX12yj3IGzxZILEANONQPQkvhTI-NqaFp0sO9dxFX2kcqQ-XJsOEFdBpGRmncYr2HKd6bB0Un-oQ=="
+influxdb_init_admin_token: "Some token"
 
 # Telegraf configurations.
 

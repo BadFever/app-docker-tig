@@ -9,7 +9,7 @@ services:
     volumes:
       - "./nginx/config/conf.d:/etc/nginx/conf.d:ro"
     networks:
-      - tig
+      - app-docker-tig
     depends_on:
       - grafana
 
@@ -20,7 +20,7 @@ services:
     volumes:
       - "grafana-data:/var/lib/grafana"
     networks:
-      - tig
+      - app-docker-tig
     depends_on:
       - influxdb
 
@@ -36,7 +36,7 @@ services:
       - "influxdb-data:/var/lib/influxdb2"
       - "influxdb-config:/etc/influxdb2"
     networks:
-      - tig
+      - app-docker-tig
 
   telegraf:
     build:
@@ -47,16 +47,25 @@ services:
     depends_on:
       - influxdb
     networks:
-      - tig
+      - app-docker-tig
 
 networks:
-  tig:
+  app-docker-tig:
     driver: bridge
 
 volumes:
   grafana-data:
-    driver: local
+    driver_opts:
+      type: "nfs"
+      o: "addr=172.168.0.249,nolock,soft,rw"
+      device: ":/mnt/Pool02/docker"
   influxdb-data:
-    driver: local
+    driver_opts:
+      type: "nfs"
+      o: "addr=172.168.0.249,nolock,soft,rw"
+      device: ":/mnt/Pool02/docker"
   influxdb-config:
-    driver: local
+    driver_opts:
+      type: "nfs"
+      o: "addr=172.168.0.249,nolock,soft,rw"
+      device: ":/mnt/Pool02/docker"
