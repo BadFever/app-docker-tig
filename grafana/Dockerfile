@@ -1,0 +1,1 @@
+FROM grafana/grafana-oss:9.0.7
