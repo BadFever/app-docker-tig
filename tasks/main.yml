@@ -23,6 +23,11 @@
     src: "telegraf.conf.j2"
     dest: "{{ application_path }}/telegraf/config/telegraf.conf"
 
+- name: Prepare grafana configuration.
+  ansible.builtin.template:
+    src: "influxdb_ds.yml.j2"
+    dest: "{{ application_path }}/grafana/provisioning/datasources/influxdb_ds.yml"
+
 - name: Prepare docker-compose configuration.
   ansible.builtin.template:
     src: "docker-compose.yml.j2"

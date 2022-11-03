@@ -6,11 +6,13 @@ application_path: "/srv/app-docker-tig"
 # InfluxDB configurations.
 
 influxdb_init_mode: "setup"
-influxdb_init_username: "db"
-influxdb_init_password: "VMware1!"
-influxdb_init_org: "organization"
+influxdb_init_username: "admin"
+influxdb_init_password: "admin"
+influxdb_init_org: "organization01"
 influxdb_init_bucket: "bucket01"
 influxdb_init_admin_token: "Some token"
+
+influxdb_url: "http://influxdb:8086"
 
 # Telegraf configurations.
 
@@ -30,7 +32,7 @@ telegraf_agent_omit_hostname: false
 telegraf_agent_output:
   - type: influxdb_v2
     config:
-      - urls = ["http://influxdb:8086"]
+      - urls = ["{{ influxdb_url }}"]
       - token = "{{ influxdb_init_admin_token }}"
       - organization = "{{ influxdb_init_org }}"
       - bucket = "{{ influxdb_init_bucket }}"
