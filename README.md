@@ -1,5 +1,9 @@
 # docker-app-tig
 
+This ansible role creates the required `Dockerfiles` and configurations for a docker based TIG-Stack (telegraf, influxdb, grafana).
+
+## Configurable settings
+
 ## Usage
 
 ### Generate InfluxDB admin token

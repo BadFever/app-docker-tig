@@ -1,0 +1,40 @@
+---
+influxdb_init_mode: "setup"
+influxdb_url: "http://influxdb:8086"
+
+# Telegraf agent configurations.
+telegraf_agent_interval: 10
+telegraf_agent_round_interval: true
+telegraf_agent_metric_buffer_limit: 10000
+telegraf_agent_flush_buffer_when_full: true
+telegraf_agent_collection_jitter: 0
+telegraf_agent_flush_interval: 1
+telegraf_agent_flush_jitter: 0
+telegraf_agent_metric_batch_size: 1000
+telegraf_agent_debug: false
+telegraf_agent_quiet: false
+telegraf_agent_hostname: "{{ ansible_fqdn }}"
+telegraf_agent_omit_hostname: false
+
+# Telegraf output configurations.
+telegraf_agent_output:
+  - type: influxdb_v2
+    config:
+      - urls = ["{{ influxdb_url }}"]
+      - token = "{{ influxdb_init_admin_token }}"
+      - organization = "{{ influxdb_init_org }}"
+      - bucket = "{{ influxdb_init_bucket }}"
+
+
+# Telegraf input configurations.
+telegraf_plugins_extra:
+  - type: vsphere
+    config:
+      - vcenters = ["https://172.168.0.20/sdk"]
+      - username = "{{ telegraf_default_vsphere_username }}"
+      - password = ""{{ telegraf_default_vsphere_password }}"
+      - vm_metric_include = []
+      - vm_instances = true
+      - host_metric_include = []
+      - insecure_skip_verify = true
+      - historical_interval = "5m"
