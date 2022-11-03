@@ -30,9 +30,9 @@ telegraf_agent_output:
 telegraf_plugins_extra:
   - type: vsphere
     config:
-      - vcenters = ["https://172.168.0.20/sdk"]
+      - vcenters = ["{{ telegraf_default_vsphere_vcenter }}"]
       - username = "{{ telegraf_default_vsphere_username }}"
-      - password = ""{{ telegraf_default_vsphere_password }}"
+      - password = "{{ telegraf_default_vsphere_password }}"
       - vm_metric_include = []
       - vm_instances = true
       - host_metric_include = []
