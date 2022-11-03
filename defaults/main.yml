@@ -1,20 +1,20 @@
 ---
 # General app configurations.
-
 application_path: "/srv/app-docker-tig"
 
 # InfluxDB configurations.
-
 influxdb_init_mode: "setup"
-influxdb_init_username: "admin"
+influxdb_init_username: "db"
 influxdb_init_password: "admin"
 influxdb_init_org: "organization01"
 influxdb_init_bucket: "bucket01"
 influxdb_init_admin_token: "Some token"
 
 influxdb_url: "http://influxdb:8086"
+influxdb_version: "influxdb:2.3.0-alpine"
 
 # Telegraf configurations.
+telegraf_version: "telegraf:1.23.3-alpine"
 
 telegraf_global_tags: []
 telegraf_agent_interval: 10
@@ -29,6 +29,8 @@ telegraf_agent_debug: false
 telegraf_agent_quiet: false
 telegraf_agent_hostname: "{{ ansible_fqdn }}"
 telegraf_agent_omit_hostname: false
+
+# Telegraf output configurations.
 telegraf_agent_output:
   - type: influxdb_v2
     config:
@@ -36,6 +38,8 @@ telegraf_agent_output:
       - token = "{{ influxdb_init_admin_token }}"
       - organization = "{{ influxdb_init_org }}"
       - bucket = "{{ influxdb_init_bucket }}"
+
+# Telegraf input configurations.
 telegraf_plugins_extra:
   - type: vsphere
     config:
@@ -47,3 +51,10 @@ telegraf_plugins_extra:
       - host_metric_include = []
       - insecure_skip_verify = true
       - historical_interval = "5m"
+
+
+# NGINX configurations.
+nginx_version: "nginx:1.20-alpine"
+
+# Grafana configurations
+grafana_version: "grafana/grafana-oss:9.2.3"

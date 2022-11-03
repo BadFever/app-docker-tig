@@ -1,44 +1,51 @@
+---
 - name: Create application directory.
   ansible.builtin.file:
     path: "{{ application_path }}"
     state: directory
 
-- name: Copy Dockerfiles.
-  ansible.builtin.copy:
-    src: "{{ item }}/"
-    dest: "{{ application_path }}/{{ item }}/"
+- name: Create application sub directories.
+  ansible.builtin.file:
+    path: "{{ application_path }}/{{ item }}"
+    state: directory
   loop:
+    - telegraf/config/
+    - grafana/provisioning/dashboards/
+    - grafana/provisioning/datasources/
+    - influxdb
+    - nginx/config/conf.d
+
+- name: Create Dockerfiles.
+  ansible.builtin.template:
+    src: "{{ item }}/Dockerfile_tpl.j2"
+    dest: "{{ application_path }}/{{ item }}/Dockerfile"
+  loop:
+    - nginx
     - grafana
     - influxdb
-    - nginx
     - telegraf
-  
-- name: Prepare influxdb configuration.
-  ansible.builtin.template:
-    src: "env.influxdb.j2"
-    dest: "{{ application_path }}/env.influxdb"
 
-- name: Create telegraf configuration directory.
-  ansible.builtin.file:
-    path: "{{ application_path }}/telegraf/config/"
-    state: directory
-
-- name: Prepare telegraf configuration.
+- name: Create nginx configuration file.
   ansible.builtin.template:
-    src: "telegraf.conf.j2"
+    src: "nginx/reverse-proxy.conf.j2"
+    dest: "{{ application_path }}/nginx/conf/conf.d/reverse-proxy.conf"
+
+- name: Create telegraf configuration file.
+  ansible.builtin.template:
+    src: "telegraf/telegraf.conf.j2"
     dest: "{{ application_path }}/telegraf/config/telegraf.conf"
 
-- name: Create grafana configuration directory.
-  ansible.builtin.file:
-    path: "{{ application_path }}/grafana/provisioning/datasources/"
-    state: directory
-
-- name: Prepare grafana configuration.
+- name: Create grafana configuration.
   ansible.builtin.template:
-    src: "influxdb_ds.yml.j2"
+    src: "influxdb/influxdb_ds.yml.j2"
     dest: "{{ application_path }}/grafana/provisioning/datasources/influxdb_ds.yml"
 
-- name: Prepare docker-compose configuration.
+- name: Copy grafana dashboard configuration.
+  ansible.builtin.file:
+    src: "grafana/"
+    dest: "{{ application_path }}/grafana/provisioning/dashboards/"
+
+- name: Create docker-compose configuration.
   ansible.builtin.template:
     src: "docker-compose.yml.j2"
     dest: "{{ application_path }}/docker-compose.yml"
