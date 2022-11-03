@@ -3,7 +3,7 @@ apiVersion: 1
 editable: true
 
 datasources:
-  - name: InfluxDB_v2_Flux
+  - name: InfluxDB
     type: inflxudb
     access: proxy
     url: {{ influxdb_url }}
@@ -11,6 +11,7 @@ datasources:
       token: {{ influxdb_init_admin_token }}
     jsonData:
       version: Flux
+      httpMode: "POST"
       organization: {{ influxdb_init_org }}
       defaultBucket: {{ influxdb_init_bucket }}
       tlsSkipVerify: true
