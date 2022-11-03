@@ -28,7 +28,7 @@
 - name: Create nginx configuration file.
   ansible.builtin.template:
     src: "nginx/reverse-proxy.conf.j2"
-    dest: "{{ application_path }}/nginx/conf/conf.d/reverse-proxy.conf"
+    dest: "{{ application_path }}/nginx/config/conf.d/reverse-proxy.conf"
 
 - name: Create telegraf configuration file.
   ansible.builtin.template:
