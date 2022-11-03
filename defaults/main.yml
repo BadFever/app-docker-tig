@@ -15,23 +15,9 @@ telegraf_version: "telegraf:1.23.3-alpine"
 
 telegraf_global_tags: []
 
-telegraf_default_vsphere_vcenters: ""
+telegraf_default_vsphere_vcenter: ""
 telegraf_default_vsphere_username: ""
 telegraf_default_vsphere_password: ""
-
-# Telegraf input configurations.
-telegraf_plugins_extra:
-  - type: vsphere
-    config:
-      - vcenters = ["https://172.168.0.20/sdk"]
-      - username = "administrator@vsphere.local"
-      - password = "fever.123WL"
-      - vm_metric_include = []
-      - vm_instances = true
-      - host_metric_include = []
-      - insecure_skip_verify = true
-      - historical_interval = "5m"
-
 
 # NGINX configurations.
 nginx_version: "nginx:1.20-alpine"
