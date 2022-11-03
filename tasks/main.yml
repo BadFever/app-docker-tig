@@ -41,7 +41,7 @@
     dest: "{{ application_path }}/grafana/provisioning/datasources/influxdb_ds.yml"
 
 - name: Copy grafana dashboard configuration.
-  ansible.builtin.file:
+  ansible.builtin.copy:
     src: "grafana/"
     dest: "{{ application_path }}/grafana/provisioning/dashboards/"
 
