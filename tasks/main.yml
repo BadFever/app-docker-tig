@@ -13,7 +13,7 @@
     - grafana/provisioning/dashboards/
     - grafana/provisioning/datasources/
     - influxdb
-    - nginx/config/conf.d
+    - nginx/config/conf.d/
 
 - name: Create Dockerfiles.
   ansible.builtin.template:
