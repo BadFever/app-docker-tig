@@ -18,10 +18,20 @@
     src: "env.influxdb.j2"
     dest: "{{ application_path }}/env.influxdb"
 
+- name: Create telegraf configuration directory.
+  ansible.builtin.file:
+    path: "{{ application_path }}/telegraf/config/"
+    state: directory
+
 - name: Prepare telegraf configuration.
   ansible.builtin.template:
     src: "telegraf.conf.j2"
     dest: "{{ application_path }}/telegraf/config/telegraf.conf"
+
+- name: Create grafana configuration directory.
+  ansible.builtin.file:
+    path: "{{ application_path }}/grafana/provisioning/datasources/"
+    state: directory
 
 - name: Prepare grafana configuration.
   ansible.builtin.template:
