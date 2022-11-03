@@ -87,7 +87,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -216,7 +216,7 @@
                 "alias": "vCenter Summary",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -258,7 +258,7 @@
                 "alias": "Cluster Summary",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -300,7 +300,7 @@
                 "alias": "ESXi Summary",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -342,7 +342,7 @@
                 "alias": "VM Summary",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -384,7 +384,7 @@
                 "alias": "Datastore Summary",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -457,7 +457,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "description": "",
             "fieldConfig": {
@@ -613,7 +613,7 @@
               {
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -673,7 +673,7 @@
               {
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -739,7 +739,7 @@
               {
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -831,7 +831,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -919,7 +919,7 @@
                 "alias": "$tag_clustername",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -991,7 +991,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -1077,7 +1077,7 @@
                 "alias": "$tag_clustername",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -1142,7 +1142,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -1208,7 +1208,7 @@
                 "alias": "$tag_source",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -1254,7 +1254,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -1337,7 +1337,7 @@
                 "alias": "$tag_clustername - Received",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -1393,7 +1393,7 @@
                 "alias": "$tag_clustername - Transmited",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -1452,7 +1452,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -1536,7 +1536,7 @@
                 "alias": "$tag_clustername - ReadAverage",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -1592,7 +1592,7 @@
                 "alias": "$tag_clustername - WriteAverage",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -1678,7 +1678,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -1738,7 +1738,7 @@
               {
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "groupBy": [
                   {
@@ -1818,7 +1818,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -1907,7 +1907,7 @@
                 "alias": "$tag_esxhostname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -1972,7 +1972,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -2061,7 +2061,7 @@
                 "alias": "$tag_esxhostname mem usage average",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -2119,7 +2119,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -2206,7 +2206,7 @@
                 "alias": "$tag_esxhostname net usage average",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -2264,7 +2264,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -2349,7 +2349,7 @@
                 "alias": "$tag_vcenter CPU",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -2410,7 +2410,7 @@
                 "alias": "$tag_vcenter RAM",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -2495,7 +2495,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -2584,7 +2584,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -2654,7 +2654,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -2740,7 +2740,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -2798,7 +2798,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -2882,7 +2882,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -2941,7 +2941,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -3025,7 +3025,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -3083,7 +3083,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -3166,7 +3166,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -3227,7 +3227,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -3310,7 +3310,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -3370,7 +3370,7 @@
           {
             "datasource": {
               "type": "influxdb",
-              "uid": "influx_3fJk"
+              "uid": "InfluxDB"
             },
             "fieldConfig": {
               "defaults": {
@@ -3453,7 +3453,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -3510,7 +3510,7 @@
                 "alias": "$tag_vmname",
                 "datasource": {
                   "type": "influxdb",
-                  "uid": "influx_3fJk"
+                  "uid": "InfluxDB"
                 },
                 "dsType": "influxdb",
                 "groupBy": [
@@ -3675,7 +3675,7 @@
           "current": {},
           "datasource": {
             "type": "influxdb",
-            "uid": "influx_3fJk"
+            "uid": "InfluxDB"
           },
           "definition": "from(bucket: v.defaultBucket)\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"vsphere_host_cpu\")\r\n  |> keep(columns: [\"vcenter\"])\r\n  |> distinct(column: \"vcenter\")\r\n  |> group()",
           "hide": 0,
@@ -3698,7 +3698,7 @@
           "current": {},
           "datasource": {
             "type": "influxdb",
-            "uid": "influx_3fJk"
+            "uid": "InfluxDB"
           },
           "definition": "from(bucket: v.defaultBucket)\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"vsphere_cluster_cpu\")\r\n  |> filter(fn: (r) => r[\"clustername\"] != \"\")\r\n  |> filter(fn: (r) => r[\"vcenter\"] == \"${vcenter}\")\r\n  |> keep(columns: [\"clustername\"])\r\n  |> distinct(column: \"clustername\")\r\n  |> group()\r\n",
           "hide": 0,
@@ -3721,7 +3721,7 @@
           "current": {},
           "datasource": {
             "type": "influxdb",
-            "uid": "influx_3fJk"
+            "uid": "InfluxDB"
           },
           "definition": "from(bucket: v.defaultBucket)\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"vsphere_host_cpu\")\r\n  |> filter(fn: (r) => r[\"esxhostname\"] != \"\")\r\n  |> filter(fn: (r) => r[\"vcenter\"] == \"${vcenter}\")\r\n  |> keep(columns: [\"esxhostname\"])\r\n  |> distinct(column: \"esxhostname\")\r\n  |> group()",
           "hide": 0,
@@ -3744,7 +3744,7 @@
           "current": {},
           "datasource": {
             "type": "influxdb",
-            "uid": "influx_3fJk"
+            "uid": "InfluxDB"
           },
           "definition": "from(bucket: v.defaultBucket)\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"vsphere_datastore_disk\")\r\n  |> filter(fn: (r) => r[\"dsname\"] != \"\")\r\n  |> filter(fn: (r) => r[\"vcenter\"] == \"${vcenter}\")\r\n  |> keep(columns: [\"dsname\"])\r\n  |> distinct(column: \"dsname\")\r\n  |> group()",
           "hide": 0,
@@ -3768,7 +3768,7 @@
           "current": {},
           "datasource": {
             "type": "influxdb",
-            "uid": "influx_3fJk"
+            "uid": "InfluxDB"
           },
           "definition": "from(bucket: v.defaultBucket)\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"vsphere_vm_cpu\")\r\n  |> filter(fn: (r) => r[\"vmname\"] != \"\")\r\n  |> filter(fn: (r) => r[\"vcenter\"] == \"${vcenter}\")\r\n  |> keep(columns: [\"vmname\"])\r\n  |> distinct(column: \"vmname\")\r\n  |> group()",
           "hide": 0,
