@@ -2,34 +2,34 @@
 
 # Global tags can be specified here in key="value" format.
 [global_tags]
-{% if app_docker_tig_telegraf_global_tags is defined and app_docker_tig_telegraf_global_tags is iterable %}
-{% for item in app_docker_tig_telegraf_global_tags %}
+{% if telegraf_global_tags is defined and telegraf_global_tags is iterable %}
+{% for item in telegraf_global_tags %}
     {{ item.tag_name }} = "{{ item.tag_value }}"
 {% endfor %}
 {% endif %}
 
 # Configuration for telegraf agent
 [agent]
-  interval = "{{ app_docker_tig_telegraf_agent_interval }}s"
-  round_interval = {{ app_docker_tig_telegraf_agent_round_interval | lower }}
-  metric_buffer_limit = {{ app_docker_tig_telegraf_agent_metric_buffer_limit }}
-  flush_buffer_when_full = {{ app_docker_tig_telegraf_agent_flush_buffer_when_full | lower}}
-  collection_jitter = "{{ app_docker_tig_telegraf_agent_collection_jitter }}s"
-  flush_interval = "{{ app_docker_tig_telegraf_agent_flush_interval }}s"
-  flush_jitter = "{{ app_docker_tig_telegraf_agent_flush_jitter }}s"
-  metric_batch_size = {{ app_docker_tig_telegraf_agent_metric_batch_size }}
-  quiet = {{ app_docker_tig_telegraf_agent_quiet | lower }}
-  debug = {{ app_docker_tig_telegraf_agent_debug | lower }}
-  hostname = "{{ app_docker_tig_telegraf_agent_hostname }}"
-  omit_hostname = {{ app_docker_tig_telegraf_agent_omit_hostname | lower }}
+  interval = "{{ telegraf_agent_interval }}s"
+  round_interval = {{ telegraf_agent_round_interval | lower }}
+  metric_buffer_limit = {{ telegraf_agent_metric_buffer_limit }}
+  flush_buffer_when_full = {{ telegraf_agent_flush_buffer_when_full | lower}}
+  collection_jitter = "{{ telegraf_agent_collection_jitter }}s"
+  flush_interval = "{{ telegraf_agent_flush_interval }}s"
+  flush_jitter = "{{ telegraf_agent_flush_jitter }}s"
+  metric_batch_size = {{ telegraf_agent_metric_batch_size }}
+  quiet = {{ telegraf_agent_quiet | lower }}
+  debug = {{ telegraf_agent_debug | lower }}
+  hostname = "{{ telegraf_agent_hostname }}"
+  omit_hostname = {{ telegraf_agent_omit_hostname | lower }}
 
 
 ###############################################################################
 #                                  OUTPUTS                                    #
 ###############################################################################
 
-{% if app_docker_tig_telegraf_agent_output is defined and app_docker_tig_telegraf_agent_output is iterable %}
-{% for item in app_docker_tig_telegraf_agent_output %}
+{% if telegraf_agent_output is defined and telegraf_agent_output is iterable %}
+{% for item in telegraf_agent_output %}
 [[outputs.{{ item.type }}]]
 {% for items in item.config %}
     {{ items }}
@@ -53,8 +53,8 @@
 #                                  INPUTS                                     #
 ###############################################################################
 
-{% if app_docker_tig_telegraf_plugins_extra is defined and app_docker_tig_telegraf_plugins_extra is iterable %}
-{% for item in app_docker_tig_telegraf_plugins_extra %}
+{% if telegraf_plugins_extra is defined and telegraf_plugins_extra is iterable %}
+{% for item in telegraf_plugins_extra %}
 [[inputs.{{ item.type }}]]
 {% for items in item.config %}
     {{ items }}

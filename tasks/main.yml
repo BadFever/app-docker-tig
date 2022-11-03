@@ -23,7 +23,12 @@
     src: "telegraf.conf.j2"
     dest: "{{ application_path }}/telegraf/config/telegraf.conf"
 
-- name: Prepare docker-compose.
+- name: Prepare docker-compose configuration.
   ansible.builtin.template:
     src: "docker-compose.yml.j2"
     dest: "{{ application_path }}/docker-compose.yml"
+
+- name: Start application.
+  community.docker.docker_compose:
+    project_src: "{{ application_path }}"
+    state: present
