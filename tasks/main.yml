@@ -37,13 +37,18 @@
 
 - name: Create grafana configuration.
   ansible.builtin.template:
-    src: "influxdb/influxdb_ds.yml.j2"
+    src: "grafana/influxdb_ds.yml.j2"
     dest: "{{ application_path }}/grafana/provisioning/datasources/influxdb_ds.yml"
 
 - name: Copy grafana dashboard configuration.
   ansible.builtin.file:
     src: "grafana/"
     dest: "{{ application_path }}/grafana/provisioning/dashboards/"
+
+- name: Create influxdb configuration.
+  ansible.builtin.template:
+    src: "influxdb/env.influxdb.j2"
+    dest: "{{ application_path }}/env.influxdb"
 
 - name: Create docker-compose configuration.
   ansible.builtin.template:
