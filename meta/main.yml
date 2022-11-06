@@ -1,6 +1,13 @@
 ---
 dependencies:
   - role: ansible-role-docker
+  - role: ansible-role-certs
+    vars:
+      certs_ca_path: "{{ ca_path }}"
+      certs_ca_private_key_path: "{{ ca_private_key_path }}"
+      certs_ca_private_key_passphrase: "{{ ca_private_key_passphrase }}"
+      certs_path: "{{ application_path }}/nginx/certs"
+    when: enable_ssl|bool == true
 
 galaxy_info:
   author: badfever
