@@ -57,17 +57,5 @@ networks:
 
 volumes:
   grafana-data:
-    driver_opts:
-      type: "nfs"
-      o: "addr=172.168.0.249,nolock,soft,rw"
-      device: ":/mnt/Pool02/docker/grafana-data"
   influxdb-data:
-    driver_opts:
-      type: "nfs"
-      o: "addr=172.168.0.249,nolock,soft,rw"
-      device: ":/mnt/Pool02/docker/influxdb-data"
   influxdb-config:
-    driver_opts:
-      type: "nfs"
-      o: "addr=172.168.0.249,nolock,soft,rw"
-      device: ":/mnt/Pool02/docker/influxdb-config"
